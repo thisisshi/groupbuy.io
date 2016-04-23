@@ -3,6 +3,7 @@ accounts-password@1.1.6
 accounts-ui@1.1.7
 accounts-ui-unstyled@1.1.10
 aldeed:autoform@5.8.1
+aldeed:autoform-bs-datetimepicker@1.0.6
 aldeed:collection2@2.9.1
 aldeed:collection2-core@1.1.1
 aldeed:schema-deny@1.0.1
@@ -23,6 +24,7 @@ caching-html-compiler@1.0.4
 callback-hook@1.0.6
 check@1.1.2
 coffeescript@1.0.15
+dburles:google-maps@1.1.5
 dburles:mongo-collection-instances@0.3.4
 ddp@1.2.3
 ddp-client@1.2.3
@@ -118,6 +120,7 @@ stolinski:stylus-multi@1.4.3
 templating@1.1.7
 templating-tools@1.0.2
 tracker@1.0.11
+tsega:bootstrap3-datetimepicker@3.1.3_3
 twbs:bootstrap@3.3.6
 ui@1.0.9
 underscore@1.0.6
@@ -126,4 +129,5 @@ useraccounts:bootstrap@1.13.1
 useraccounts:core@1.13.1
 webapp@1.2.6
 webapp-hashing@1.0.7
+yogiben:autoform-map@0.2.0
 zimme:active-route@2.3.2
