@@ -1,24 +1,48 @@
 <template name="Groupbuy">
-  <div class="ui card">
-    <div class="content">
-      <a class="header">{{name}}</a>
-      <div class="meta">
-        {{gbType}}: {{gbSubType}}
-      </div>
-      <div class="description">
-        <h4 class="ui sub header">Important Dates</h4>
-        <span class="date">Starts: {{momentFormat gbStartDate}} Ends: {{momentFormat gbEndDate}}</span>
-        <span class="date">Estimated Ship Date: {{momentFormat estimatedShippingDate}}</span>
-        <h4 class="ui sub header">Description</h4>
-        {{description}}
-      </div>
-    </div>
-    <div class="extra content">
-      <a href="{{gbRunnerContact}}">{{gbRunner}}</a>
-      <span class="right floated">
+    <div class="ui card">
+        <div class="content">
+            <a class="header" href="gb/{{_id}}">{{name}}</a>
+            <div class="meta">
+                {{gbType}}: {{gbSubType}}
+            </div>
+            <div class="description">
+                <h4 class="ui sub header">Important Dates</h4>
+                <div class="ui small feed">
+                  <div class="event">
+                    <div class="content">
+                      <div class="summmary">
+                        Starts: {{momentFormat gbStartDate}}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="ui small feed">
+                  <div class="event">
+                    <div class="content">
+                      <div class="summmary">
+                        Ends: {{momentFormat gbEndDate}}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="ui small feed">
+                  <div class="event">
+                    <div class="content">
+                      <div class="summmary">
+                        Estimated Ship Date: {{momentFormat estimatedShippingDate}}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <h4 class="ui sub header">Description</h4> {{description}}
+            </div>
+        </div>
+        <div class="extra content">
+            <a href="{{gbRunnerContact}}">{{gbRunner}}</a>
+            <span class="right floated">
         <i class="location arrow icon"></i>
         {{gbRunnerLocation}}
       </span>
+        </div>
     </div>
-  </div>
 </template>

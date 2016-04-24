@@ -20,9 +20,11 @@
         <a class="item" href="/gb/other">Other</a>
       </div>
     </div>
-    {{#each groupbuys}}
-      {{> Groupbuy}}
-    {{/each}}
+    <div class="ui link cards">
+      {{#each groupbuys}}
+        {{> Groupbuy}}
+      {{/each}}
+    </div>
   {{else}}
   {{/if}}
 </Template>
