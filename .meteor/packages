@@ -42,3 +42,5 @@ check
 momentjs:moment
 mrt:moment-timezone
 useraccounts:bootstrap
+semantic:ui
+flemay:less-autoprefixer

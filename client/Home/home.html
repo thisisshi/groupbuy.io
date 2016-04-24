@@ -1,2 +1,10 @@
 <Template name="Home">
+  {{#if currentUser}}
+    <h3>Your Groupbuys</h3>
+    <hr />
+    {{#each groupbuys}}
+      {{> Groupbuy}}
+    {{/each}}
+  {{else}}
+  {{/if}}
 </Template>

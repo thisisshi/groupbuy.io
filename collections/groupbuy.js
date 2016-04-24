@@ -68,9 +68,7 @@ GroupbuySchema = new SimpleSchema({
     autoform:{
       type:"map",
       afFieldInput:{
-        geolocation: true,
-        searchbox: true,
-        autolocate: true
+        geolocation: true
       }
     }
   },
@@ -96,7 +94,7 @@ GroupbuySchema = new SimpleSchema({
       ]
     }
   },
-  gbStubType:{
+  gbSubType:{
     type: String,
     label: 'Groupbuy Subtype',
     allowedValues:['40%', '60%', '75%', 'TKL', 'Full Size', 'GMK', 'SP - DSA', 'SP - SA', 'SP - DCS', 'JTK', 'OEM', 'BSP', 'EnjoyPBT', 'Other'],

@@ -1,27 +1,16 @@
 <template name="Header">
-  <nav class="navbar navbar-default">
+  <div class="ui menu">
     <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="/">groupbuy.io</a>
+      <div class="header item">
+        <a href="/">groupbuy.io</a>
       </div>
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li><a href="/new">New Groupbuy</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          {{#if currentUser}}
-          <li><a href="/logout" class="logout">Logout</a></li>
-          {{else}}
-          <li><a href="/login">Login</a></li>
-          <li><a href="/register">Register</a></li>
-          {{/if}}
-        </ul>
+      <a class="item" href="/new">New Groupbuy</a>
+      <div class="right item">
+        {{#if currentUser}}
+        <a class="item logout" href="/logout">Logout</a> {{else}}
+        <a class="item" href="/login">Login</a>
+        <a class="item" href="/register">Register</a> {{/if}}
       </div>
     </div>
-  </nav>
+  </div>
 </template>
