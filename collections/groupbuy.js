@@ -139,7 +139,7 @@ GroupbuySchema = new SimpleSchema({
     label: 'Groupbuy Start Date',
     autoform:{
       afFieldInput: {
-         type: "bootstrap-datetimepicker"
+         type: "bootstrap-datepicker"
       }
     }
   },
@@ -148,7 +148,7 @@ GroupbuySchema = new SimpleSchema({
     label: 'Groupbuy End Date',
     autoform:{
       afFieldInput: {
-         type: "bootstrap-datetimepicker"
+         type: "bootstrap-datepicker"
       }
     }
   },
@@ -157,7 +157,7 @@ GroupbuySchema = new SimpleSchema({
     label: 'Estimated Shipping Date',
     autoform:{
       afFieldInput: {
-         type: "bootstrap-datetimepicker"
+         type: "bootstrap-datepicker"
       }
     }
   },

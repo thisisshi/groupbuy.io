@@ -3,7 +3,7 @@ accounts-password@1.1.6
 accounts-ui@1.1.7
 accounts-ui-unstyled@1.1.10
 aldeed:autoform@5.8.1
-aldeed:autoform-bs-datetimepicker@1.0.6
+aldeed:autoform-bs-datepicker@1.1.1
 aldeed:collection2@2.9.1
 aldeed:collection2-core@1.1.1
 aldeed:schema-deny@1.0.1
@@ -100,6 +100,7 @@ ordered-dict@1.0.5
 promise@0.6.5
 raix:eventemitter@0.1.3
 raix:handlebar-helpers@0.2.5
+rajit:bootstrap3-datepicker@1.5.1
 random@1.0.7
 rate-limit@1.0.2
 reactive-dict@1.1.5
@@ -123,7 +124,6 @@ stolinski:stylus-multi@1.4.3
 templating@1.1.7
 templating-tools@1.0.2
 tracker@1.0.11
-tsega:bootstrap3-datetimepicker@3.1.3_3
 twbs:bootstrap@3.3.6
 ui@1.0.9
 underscore@1.0.6

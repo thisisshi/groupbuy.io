@@ -19,8 +19,8 @@ ecmascript              # Enable ECMAScript2015+ syntax in app code
 
 session
 twbs:bootstrap
-tsega:bootstrap3-datetimepicker@=3.1.3_3
-aldeed:autoform-bs-datetimepicker
+rajit:bootstrap3-datepicker
+aldeed:autoform-bs-datepicker
 yogiben:autoform-map
 kadira:flow-router
 kadira:blaze-layout

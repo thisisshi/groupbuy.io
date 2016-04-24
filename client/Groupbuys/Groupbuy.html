@@ -1,48 +1,60 @@
 <template name="Groupbuy">
     <div class="ui card">
+        <div class="image">
+            <img src="http://i.imgur.com/ZkW1m8H.jpg" class="visible content">
+        </div>
+
         <div class="content">
+            <div class="right floated meta">
+                <h4 class="ui sub header blue">MOQ Progress: {{progressTowardsMOQ}}/{{gbMOQ}}</h4>
+            </div>
             <a class="header" href="gb/{{_id}}">{{name}}</a>
             <div class="meta">
                 {{gbType}}: {{gbSubType}}
             </div>
+
             <div class="description">
                 <h4 class="ui sub header">Important Dates</h4>
                 <div class="ui small feed">
-                  <div class="event">
-                    <div class="content">
-                      <div class="summmary">
-                        Starts: {{momentFormat gbStartDate}}
-                      </div>
+                    <div class="event">
+                        <div class="content">
+                            <div class="summmary">
+                                Starts: {{momentFormat gbStartDate}}
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
                 <div class="ui small feed">
-                  <div class="event">
-                    <div class="content">
-                      <div class="summmary">
-                        Ends: {{momentFormat gbEndDate}}
-                      </div>
+                    <div class="event">
+                        <div class="content">
+                            <div class="summmary">
+                                Ends: {{momentFormat gbEndDate}}
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
                 <div class="ui small feed">
-                  <div class="event">
-                    <div class="content">
-                      <div class="summmary">
-                        Estimated Ship Date: {{momentFormat estimatedShippingDate}}
-                      </div>
+                    <div class="event">
+                        <div class="content">
+                            <div class="summmary">
+                                Estimated Ship Date: {{momentFormat estimatedShippingDate}}
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
                 <h4 class="ui sub header">Description</h4> {{description}}
             </div>
         </div>
         <div class="extra content">
             <a href="{{gbRunnerContact}}">{{gbRunner}}</a>
-            <span class="right floated">
-        <i class="location arrow icon"></i>
-        {{gbRunnerLocation}}
-      </span>
+            <span class="right floated"><i class="location arrow icon"></i>{{gbRunnerLocation}}</span>
+            <hr />
+            <h4 class="ui sub header teal">Current Status: {{status}}</h4>
+        </div>
+        <div class="ui bottom attached button" id="progressbar">
+            <i class="add icon"></i> Add To Your Groupbuys
         </div>
     </div>
+    <script>
+    </script>
 </template>
