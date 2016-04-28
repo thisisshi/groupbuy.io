@@ -38,7 +38,7 @@ GroupbuySchema = new SimpleSchema({
         {label: 'Deadline Passed', value: 'Deadline Passed'},
         {label: 'In Production', value: 'In Production'},
         {label: 'Shipping', value: 'Shipping'},
-        {label: 'Completed', value: 'Complted'}
+        {label: 'Completed', value: 'Completed'}
       ]
     }
   },
@@ -64,13 +64,7 @@ GroupbuySchema = new SimpleSchema({
   },
   gbRunnerLocation:{
     type: String,
-    label: "Groupbuy Shipping Location",
-    autoform:{
-      type:"map",
-      afFieldInput:{
-        geolocation: true
-      }
-    }
+    label: "Groupbuy Shipping Location"
   },
   manufacturer:{
     type:String,

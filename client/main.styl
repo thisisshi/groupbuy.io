@@ -1,4 +1,10 @@
 gb-green = #18b645
+gb-yellow = #e3e716
+gb-red = #e63030
+gb-blue = #1890f2
+gb-purple = #9e00de
+gb-orange = #f7760c
+gb-black = #000000
 
 main
    min-height:95vh;
@@ -11,8 +17,33 @@ fieldset
   height: 40px;
   padding:20px;
 
-.Interest
+.Interest.Check
   color: gb-green;
+  font-size: 0.85714286em;
+  text-transform: uppercase;
+
+.In.Progress
+  color: gb-blue;
+  font-size: 0.85714286em;
+  text-transform: uppercase;
+
+.Deadline.Passed
+  color: gb-red;
+  font-size: 0.85714286em;
+  text-transform: uppercase;
+
+.In.Production
+  color: gb-purple;
+  font-size: 0.85714286em;
+  text-transform: uppercase;
+
+.Shipping
+  color: gb-orange;
+  font-size: 0.85714286em;
+  text-transform: uppercase;
+
+.Completed
+  color: gb-black;
   font-size: 0.85714286em;
   text-transform: uppercase;
 
@@ -21,9 +52,18 @@ fieldset
   border-radius:0px;
   border: 0px;
 
+.ui.bottom.attached.button
+  a
+    color:#5b5b5b;
+
 .ui.bottom.attached.button:hover
   background-color:gb-green;
   color:#fff;
+  a
+    color:#fff;
 
-.ui.card:hover
-  box-shadow: 0px 1px 3px 0px gb-green, 0px 0px 0px 1px gb-green;
+.description
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
