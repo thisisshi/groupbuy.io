@@ -64,7 +64,7 @@ GroupbuySchema = new SimpleSchema({
   },
   gbRunnerLocation:{
     type: String,
-    label: "Groupbuy Runner Location",
+    label: "Groupbuy Shipping Location",
     autoform:{
       type:"map",
       afFieldInput:{
