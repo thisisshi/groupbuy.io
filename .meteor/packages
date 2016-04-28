@@ -25,7 +25,6 @@ yogiben:autoform-map
 kadira:flow-router
 kadira:blaze-layout
 erasaur:meteor-lodash
-stolinski:stylus-multi
 fortawesome:fontawesome
 spiderable
 fastclick
