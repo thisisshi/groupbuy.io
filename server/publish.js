@@ -40,5 +40,20 @@ Meteor.publish('Home', function() {
 });
 
 Meteor.publish('Explore', function() {
-    return Groupbuys.find({});
+    var gbs = [];
+    Meteor.users.find({
+        _id: this.userId
+    }, {
+        fields: {
+            groupbuys: 1,
+            _id: 0
+        }
+    }).forEach(function(obj) {
+        gbs = obj.groupbuys;
+    });
+    return Groupbuys.find({
+        _id: {
+            $nin: gbs
+        }
+    });
 });
