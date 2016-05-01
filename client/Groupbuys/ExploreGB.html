@@ -1,4 +1,4 @@
-<template name="Groupbuy">
+<template name="ExploreGB">
     <div class="ui card">
         <div class="image">
             <img src="http://i.imgur.com/ZkW1m8H.jpg" class="visible content">
@@ -10,7 +10,7 @@
             </div>
             <a class="header" href="gb/{{_id}}">{{name}}</a>
             <div class="right floated meta">
-              <h4 class="ui sub header">Ends {{momentFormat gbEndDate}}</h4>
+                <h4 class="ui sub header">Ends {{momentFormat gbEndDate}}</h4>
             </div>
             <div class="meta">
                 {{gbType}}: {{gbSubType}}
@@ -35,6 +35,9 @@
             <span class="right floated">{{gbRunnerLocation}}<i class="location arrow icon"></i></span>
             <hr />
             <h4 class="ui sub {{status}}">Current Status: {{status}}</h4>
+        </div>
+        <div class="ui bottom attached button" id="addToGBs">
+            <a><i class="add icon"></i> Add To Your Groupbuys</a>
         </div>
     </div>
 </template>

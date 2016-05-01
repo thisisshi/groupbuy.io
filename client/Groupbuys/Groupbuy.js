@@ -6,15 +6,3 @@ Template.Groupbuy.helpers({
         return progress / MOQ * 100;
     }
 });
-
-Template.Groupbuy.events({
-    'click #addToGBs': function() {
-        Meteor.users.update({
-            _id: Meteor.userId()
-        }, {
-            $push: {
-                groupbuys: this._id
-            }
-        });
-    }
-});
