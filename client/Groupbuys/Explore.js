@@ -1,11 +1,11 @@
-Template.Home.helpers({
+Template.Explore.helpers({
     groupbuys: () => {
         return Groupbuys.find({});
     }
 });
-Template.Home.onRendered(function() {
+Template.Explore.onRendered(function() {
     var self = this;
     self.autorun(function() {
-        self.subscribe('Home');
+        self.subscribe('Explore');
     });
 });

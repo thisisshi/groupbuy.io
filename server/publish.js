@@ -1,25 +1,44 @@
 Meteor.publish(null, function() {
-  return Meteor.users.find({
-    _id: this.userId
-  }, {
-    fields: {
-      emails: 1,
-      profile: 1
-    }
-  });
+    return Meteor.users.find({
+        _id: this.userId
+    }, {
+        fields: {
+            emails: 1,
+            profile: 1
+        }
+    });
 });
 Meteor.publish(null, function() {
-  return Meteor.users.find({
-    _id: Meteor.userId()
-  });
+    return Meteor.users.find({
+        _id: this.userId
+    });
 });
 
 Meteor.users.allow({
-  update: function(userId, doc){
-    return !!userId;
-  }
+    update: function(userId, doc) {
+        return !!userId;
+    }
 });
 
-Meteor.publish('Groupbuys', function(){
-  return Groupbuys.find({});
+Meteor.publish('Home', function() {
+    var gbs = [];
+    Meteor.users.find({
+        _id: this.userId
+    }, {
+        fields: {
+            groupbuys: 1,
+            _id: 0
+        }
+    }).forEach(function(obj) {
+        gbs = obj.groupbuys;
+    });
+    return Groupbuys.find({
+        _id: {
+            $in: gbs
+        }
+    });
+});
+
+Meteor.publish('Explore', function() {
+    return Groupbuys.find({});
 });
