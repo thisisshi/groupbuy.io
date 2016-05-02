@@ -1,10 +1,4 @@
 <Template name="Home">
-  <div class="ui huge message main">
-    <h1 class="ui huge header main">groupbuy.io</h1>
-    <p>
-      A platform for groupbuys.
-    </p>
-  </div>
   {{#if currentUser}}
     <h3>Your Groupbuys</h3>
     <div class="ui divider"></div>
@@ -26,5 +20,12 @@
       {{/each}}
     </div>
   {{else}}
+    <div class="ui huge message main">
+      <h1 class="ui huge header main">groupbuy.io</h1>
+      <p>
+        A platform for groupbuys.
+      </p>
+    </div>
+    {{> Explore}}
   {{/if}}
 </Template>

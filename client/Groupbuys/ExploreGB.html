@@ -36,8 +36,10 @@
             <hr />
             <h4 class="ui sub {{status}}">Current Status: {{status}}</h4>
         </div>
-        <div class="ui bottom attached button" id="addToGBs">
-            <a><i class="add icon"></i> Add To Your Groupbuys</a>
-        </div>
+        {{#if currentUser}}
+          <div class="ui bottom attached button" id="addToGBs">
+              <a><i class="add icon"></i> Add To Your Groupbuys</a>
+          </div>
+        {{/if}}
     </div>
 </template>
