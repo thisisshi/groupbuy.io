@@ -12,7 +12,7 @@ Template.ExploreGB.events({
         Meteor.users.update({
             _id: Meteor.userId()
         }, {
-            $push: {
+            $addToSet: {
                 groupbuys: this._id
             }
         });
