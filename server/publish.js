@@ -30,7 +30,9 @@ Meteor.publish('Home', function() {
             _id: 0
         }
     }).forEach(function(obj) {
+      if(obj.groupbuys != null){
         gbs = obj.groupbuys;
+      }
     });
     return Groupbuys.find({
         _id: {
@@ -49,7 +51,9 @@ Meteor.publish('Explore', function() {
             _id: 0
         }
     }).forEach(function(obj) {
+      if(obj.groupbuys != null){
         gbs = obj.groupbuys;
+      }
     });
     return Groupbuys.find({
         _id: {
