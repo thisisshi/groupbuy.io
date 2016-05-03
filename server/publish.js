@@ -61,3 +61,7 @@ Meteor.publish('Explore', function() {
         }
     });
 });
+
+Meteor.publish('GBSingle', function(id){
+  return Groupbuys.find({_id: id});
+})
