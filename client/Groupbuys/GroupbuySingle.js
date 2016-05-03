@@ -4,6 +4,9 @@ Template.GBSingle.helpers({
         return Groupbuys.findOne({
             _id: id
         });
+    },
+    momentFormat: function(time) {
+        return moment(time).format('MM/DD/YYYY');
     }
 });
 
@@ -17,12 +20,12 @@ Template.GBSingle.onRendered(function() {
 
 Template.GBSingle.events({
   'click #joinbutton': function(){
-    gb: () => {
-        var id = FlowRouter.getParam('id');
-        return Groupbuys.findOne({
-            _id: id
-        });
-    }
-    location.href="{{gb.gbBuyLink}}"
+    Meteor.users.update({
+        _id: Meteor.userId()
+    }, {
+        $addToSet: {
+            groupbuys: this._id
+        }
+    });
   }
 })

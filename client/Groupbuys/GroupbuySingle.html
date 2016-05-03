@@ -14,11 +14,16 @@
           </div>
         </div>
         <div class="four wide column">
+          <h3>Dates</h3>
+          <hr />
+          <h3>Groupbuy Period:</h3>
+          <h4>{{momentFormat gb.gbStartDate}} - {{momentFormat gb.gbEndDate}}</h4>
+          <h4>Estimated Shipping Date: {{momentFormat gb.estimatedShipDate}}</h4>
           <h3>Important Links</h3>
           <hr />
             <a href="http://{{gb.gbBuyLink}}">
-                <div class="ui labeled button" id="joinbutton" tabindex="0">
-                    <div class="ui positive button">
+                <div class="ui labeled button fluid" id="joinbutton" tabindex="0">
+                    <div class="ui positive button fluid">
                         <i class="add icon"></i> Join Groupbuy
                     </div>
                     <a class="ui basic label">{{gb.progressTowardsMOQ}} / {{gb.gbMOQ}}</a>
@@ -26,7 +31,7 @@
             </a>
             <hr  />
             <a href="http://{{gb.gbForumLink}}">
-                <div class="ui blue button" id="joinbutton" tabindex="0">
+                <div class="ui blue button fluid" id="joinbutton" tabindex="0">
                     <i class="info circle icon"></i> More Information
                 </div>
             </a>
