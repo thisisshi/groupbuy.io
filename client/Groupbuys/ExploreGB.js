@@ -16,5 +16,6 @@ Template.ExploreGB.events({
                 groupbuys: this._id
             }
         });
+        location.reload();
     }
 });
