@@ -2,10 +2,14 @@
   {{#if currentUser}}
     <h3>Your Groupbuys</h3>
     <div class="ui divider"></div>
-    <div class="ui cards">
+    <div class="ui cards link">
+      <div class=" ui four column grid">
       {{#each groupbuys}}
+      <div class="column">
         {{> Groupbuy}}
+      </div>
       {{/each}}
+    </div>
     </div>
   {{else}}
     <div class="ui huge message main">

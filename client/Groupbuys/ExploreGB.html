@@ -1,20 +1,14 @@
 <template name="ExploreGB">
-    <div class="ui card">
+    <div class="ui fluid card">
         <div class="image">
             <img src="http://i.imgur.com/ZkW1m8H.jpg" class="visible content">
         </div>
         <div class="content">
-            <div class="right floated meta">
-                <h4 class="ui sub header blue">MOQ Progress: {{progressTowardsMOQ}}/{{gbMOQ}}</h4>
-            </div>
-            <a class="header" href="/gb/{{_id}}">{{name}}</a>
-            <div class="right floated meta">
-                <h4 class="ui sub header">Ends {{momentFormat gbEndDate}}</h4>
-            </div>
-            <div class="meta">
-                {{gbType}}: {{gbSubType}}
-            </div>
-
+          <a class="header" href="gb/{{_id}}">{{name}}</a>
+          <div class="meta">
+            <p class="ui sub header">Ends {{momentFormat gbEndDate}}</p>
+            <p class="ui sub header blue">MOQ Progress: {{progressTowardsMOQ}}/{{gbMOQ}}</p>
+          </div>
             <div class="description">
 
                 <h4 class="ui sub header">Description</h4> {{description}}

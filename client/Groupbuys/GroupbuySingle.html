@@ -4,20 +4,20 @@
             <div class="ui raised segment">
                 <h1 class="ui header">{{gb.name}}</h1>
                 <div class="ui divider"></div>
+                <img class="ui fluid centered image" src="http://i.imgur.com/ZkW1m8H.jpg" />
                 <h4>{{gb.gbType}} : {{gb.gbSubType}}</h4>
-                <img class="ui fluid image" src="http://i.imgur.com/ZkW1m8H.jpg" />
                 <h4>Status: {{gb.status}}</h4>
                 <h3>Description</h3>
                 <p>
                     {{gb.description}}
                 </p>
             </div>
+            <div class="ui raised segment">
+              <i class="warning circle red icon"></i>Updates
+              <div class="ui divider"></div>
+            </div>
         </div>
         <div class="four wide column">
-          <div class="ui raised segment">
-            <i class="warning circle icon"></i>Updates
-            <div class="ui divider"></div>
-          </div>
           <div class='ui raised segment'>
             <a href="http://{{gb.gbBuyLink}}">
                 <div class="ui labeled button fluid" id="joinbutton" tabindex="0">

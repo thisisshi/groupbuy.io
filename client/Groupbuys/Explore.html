@@ -1,7 +1,13 @@
 <Template name="Explore">
-  <h3>Explore Groupbuys</h3>
-  <div class="ui divider"></div>
-  <div class="ui cards">
-      {{#each groupbuys}} {{> ExploreGB}} {{/each}}
-  </div>
+    <h3>Explore Groupbuys</h3>
+    <div class="ui divider"></div>
+    <div class="ui cards link">
+        <div class=" ui four column grid">
+            {{#each groupbuys}}
+            <div class="column">
+                {{> ExploreGB}}
+            </div>
+            {{/each}}
+        </div>
+    </div>
 </Template>
