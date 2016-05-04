@@ -1,26 +1,45 @@
 <template name="GBSingle">
     <div class="ui grid">
         <div class="twelve wide column">
-          <div class="ui raised segment">
-            <h1 class="ui header">{{gb.name}}</h1>
-            <h4>{{gb.gbType}} : {{gb.gbSubType}}</h4>
-            <img class="ui fluid image" src="http://i.imgur.com/ZkW1m8H.jpg" />
-            <h4>Status: {{gb.status}}</h4>
-            <h4>Contact: <a href="mailto:{{gb.gbRunnerContact}}">{{gb.gbRunner}}</a></h4>
-            <h3>Description</h3>
-            <p>
-                {{gb.description}}
-            </p>
-          </div>
+            <div class="ui raised segment">
+                <h1 class="ui header">{{gb.name}}</h1>
+                <div class="ui divider"></div>
+                <h4>{{gb.gbType}} : {{gb.gbSubType}}</h4>
+                <img class="ui fluid image" src="http://i.imgur.com/ZkW1m8H.jpg" />
+                <h4>Status: {{gb.status}}</h4>
+                <h4>Contact: <a href="mailto:{{gb.gbRunnerContact}}">{{gb.gbRunner}}</a></h4>
+                <h3>Description</h3>
+                <p>
+                    {{gb.description}}
+                </p>
+            </div>
         </div>
         <div class="four wide column">
-          <h3>Dates</h3>
-          <hr />
-          <h3>Groupbuy Period:</h3>
-          <h4>{{momentFormat gb.gbStartDate}} - {{momentFormat gb.gbEndDate}}</h4>
-          <h4>Estimated Shipping Date: {{momentFormat gb.estimatedShipDate}}</h4>
-          <h3>Important Links</h3>
-          <hr />
+            <h3>Dates</h3>
+            <div class="ui divider"></div>
+            <div class="ui segments">
+                <div class="ui segment">
+                    <p>Groupbuy Period</p>
+                </div>
+                <div class="ui secondary red segment">
+                    <p>{{momentFormat gb.gbStartDate}} - {{momentFormat gb.gbEndDate}}</p>
+                </div>
+            </div>
+            <div class="ui segments">
+              <div class="ui segment">
+                <p>
+                  Estimaged Shipping Date
+                </p>
+              </div>
+              <div class="ui secondary green segment">
+                <p>
+                  {{momentFormat gb.estimatedShipDate}}
+                </p>
+              </div>
+            </div>
+            <div class="ui divider"></div>
+            <h3>Important Links</h3>
+            <div class="ui divider"></div>
             <a href="http://{{gb.gbBuyLink}}">
                 <div class="ui labeled button fluid" id="joinbutton" tabindex="0">
                     <div class="ui positive button fluid">
@@ -29,7 +48,7 @@
                     <a class="ui basic label">{{gb.progressTowardsMOQ}} / {{gb.gbMOQ}}</a>
                 </div>
             </a>
-            <hr  />
+            <div class="ui divider"></div>
             <a href="http://{{gb.gbForumLink}}">
                 <div class="ui blue button fluid" id="joinbutton" tabindex="0">
                     <i class="info circle icon"></i> More Information
