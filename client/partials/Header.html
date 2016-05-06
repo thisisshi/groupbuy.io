@@ -1,17 +1,15 @@
 <template name="Header">
-    <div class="ui menu">
-        <div class="container">
-            <div class="header item">
-                <a href="/">groupbuy.io</a>
-            </div>
-            <a class="item" href="/gb/explore">Explore Groupbuys</a> {{#if currentUser}}
-            <a class="item" href="/gb/new">New Groupbuy</a> {{/if}}
-            <div class="right menu">
-                {{#if currentUser}}
-                <a class="item logout" href="/logout">Logout</a> {{else}}
-                <a class="item" href="/login">Login</a>
-                <a class="item" href="/register">Register</a> {{/if}}
-            </div>
+    <div class="ui fixed menu">
+        <div class="header item">
+            <a href="/">groupbuy.io</a>
+        </div>
+        <a class="item" href="/gb/explore">Explore Groupbuys</a> {{#if currentUser}}
+        <a class="item" href="/gb/new">New Groupbuy</a> {{/if}}
+        <div class="right menu">
+            {{#if currentUser}}
+            <a class="item logout" href="/logout">Logout</a> {{else}}
+            <a class="item" href="/login">Login</a>
+            <a class="item" href="/register">Register</a> {{/if}}
         </div>
     </div>
 </template>
