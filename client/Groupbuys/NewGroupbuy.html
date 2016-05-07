@@ -1,77 +1,81 @@
 <template name="NewGroupbuy">
-    <div class="ui raised segment">
-        {{#autoForm collection="Groupbuys" id="insertGBForm" type="insert"}}
-        <fieldset>
-            <form class="ui form">
-                <h2 class="ui dividing header">Add a Groupbuy</h2>
-                <div class="field">
-                    {{> afQuickField name="name"}}
-                </div>
-                <div class="field">
-                    {{> afQuickField name="description"}}
-                </div>
-                <h4 class="ui dividing header">Groupbuy Runner Information</h4>
-                <div class="two fields">
-                    <div class="field">
-                        {{> afQuickField name="gbRunner"}}
-                    </div>
-                    <div class="field">
-                        {{> afQuickField name="gbRunnerForum"}}
-                    </div>
-                </div>
-                <div class="two fields">
-                    <div class="field">
-                        {{> afQuickField name="gbRunnerContact"}}
-                    </div>
-                    <div class="field">
-                        {{> afQuickField name="gbRunnerLocation"}}
-                    </div>
-                </div>
-                <h4 class="ui dividing header">Groupbuy Information</h4>
-                <div class="field">
-                    {{> afQuickField name="status"}}
-                </div>
-                <div class="field">
-                    {{> afQuickField name="manufacturer"}}
-                </div>
-                <div class="two fields">
-                    <div class="field">
-                        {{> afQuickField name="gbType"}}
-                    </div>
-                    <div class="field">
-                        {{> afQuickField name="gbSubType"}}
+    {{#autoForm collection="Groupbuys" id="insertGBForm" type="insert"}}
+    <fieldset>
+        <form class="ui form">
+            <div class="ui grid">
+                <div class="twelve wide column">
+                    <div class="ui raised segment">
+                        <h1 class="ui header">{{> afQuickField name="name"}}</h1>
+                        <h4>
+                      <div class="two fields">
+                            <div class="field">
+                              {{> afQuickField name="gbType"}}
+                            </div>
+                            <div class="field">
+                              {{> afQuickField name="gbSubType"}}
+                            </div>
+                      </div>
+                    </h4>
+                        <div class="field">
+                            {{> afQuickField name="manufacturer"}}
+                        </div>
+                        <div class="ui divider"></div>
+                        <img class="ui fluid centered image" src="http://i.imgur.com/ZkW1m8H.jpg" />
+                        <h4>{{> afQuickField name="status"}}</h4>
+                        <div class="two fields">
+                          <div class="field">
+                            {{> afQuickField name="progressTowardsMOQ"}}
+                          </div>
+                          <div class="field">
+                            {{> afQuickField name="gbMOQ"}}
+                          </div>
+                        </div>
+                        <p>
+                            {{> afQuickField name="description"}}
+                        </p>
                     </div>
                 </div>
-                <div class="two fields">
-                    <div class="field">
-                        {{> afQuickField name="gbStartDate"}}
+                <div class="four wide column">
+                    <div class='ui raised segment'>
+                      <h3>Groupbuy Runner Information</h3>
+                      {{> afQuickField name="gbRunner"}}
+                      {{> afQuickField name="gbRunnerLocation"}}
+                      {{> afQuickField name="gbRunnerForum"}}
+                      {{> afQuickField name="gbRunnerContact"}}
                     </div>
-                    <div class="field">
-                        {{> afQuickField name="gbEndDate"}}
-                    </div>
-                </div>
-                <div class="field">
-                    {{> afQuickField name="estimatedShippingDate"}}
-                </div>
-                <div class="two fields">
-                    <div class="field">
-                        {{> afQuickField name="gbMOQ"}}
-                    </div>
-                    <div class="field">
-                        {{> afQuickField name="progressTowardsMOQ"}}
-                    </div>
-                </div>
-                <div class="two fields">
-                    <div class="field">
+                    <div class="ui stacked segment">
+                        <h3>Dates</h3>
+                        <div class="ui divider"></div>
+                        <div class="ui segments">
+                            <div class="ui segment">
+                                <p>Groupbuy Period</p>
+                            </div>
+                            <div class="ui secondary red segment">
+                                <p>{{> afQuickField name="gbStartDate"}} {{> afQuickField name="gbEndDate"}}</p>
+                            </div>
+                        </div>
+                        <div class="ui segments">
+                            <div class="ui segment">
+                                <p>
+                                    Estimaged Shipping Date
+                                </p>
+                            </div>
+                            <div class="ui secondary green segment">
+                                <p>
+                                    {{> afQuickField name="estimatedShippingDate"}}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="ui divider"></div>
+                        <h3>Important Links</h3>
+                        <div class="ui divider"></div>
                         {{> afQuickField name="gbForumLink"}}
-                    </div>
-                    <div class="field">
                         {{> afQuickField name="gbBuyLink"}}
                     </div>
                 </div>
-            </form>
-        </fieldset>
-        <button type="submit" class="ui green button fluid newGBButton">Create New Groupbuy</button>
-        {{/autoForm}}
-    </div>
+            </div>
+        </form>
+    </fieldset>
+    <button type="submit" class="ui green button fluid">Create New Groupbuy</button>
+    {{/autoForm}}
 </template>
