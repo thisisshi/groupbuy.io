@@ -17,16 +17,15 @@
                 <i class="warning circle red icon"></i>Updates
                 <div class="ui divider"></div>
                 {{#each gb.updatemessages}}
-
-                  <div class="ui fluid card">
-                      <div class="content">
-                          <div class="header">{{name}}</div>
-                          <div class="meta">
-                              <span>{{momentFormat createdAt}}</span>
-                          </div>
-                          {{#markdown}}{{updatetext}}{{/markdown}}
-                      </div>
-                  </div>
+                <div class="ui fluid card">
+                    <div class="content">
+                        <div class="header">{{name}}</div>
+                        <div class="meta">
+                            <span>{{momentFormat createdAt}}</span>
+                        </div>
+                        {{#markdown}}{{updatetext}}{{/markdown}}
+                    </div>
+                </div>
                 {{/each}}
             </div>
         </div>
