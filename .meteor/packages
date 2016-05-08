@@ -20,6 +20,7 @@ ecmascript              # Enable ECMAScript2015+ syntax in app code
 session
 mquandalle:stylus
 twbs:bootstrap
+markdown
 rajit:bootstrap3-datepicker
 aldeed:autoform-bs-datepicker
 yogiben:autoform-map

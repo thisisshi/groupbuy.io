@@ -24,7 +24,7 @@
                           <div class="meta">
                               <span>{{momentFormat createdAt}}</span>
                           </div>
-                          <p>{{updatetext}}</p>
+                          {{#markdown}}{{updatetext}}{{/markdown}}
                       </div>
                   </div>
                 {{/each}}
