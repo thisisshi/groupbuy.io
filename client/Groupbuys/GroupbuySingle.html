@@ -5,7 +5,6 @@
                 <h1 class="ui header">{{gb.name}}</h1>
                 <div class="ui divider"></div>
                 <h4>{{gb.gbType}} : {{gb.gbSubType}}</h4>
-
                 <img class="ui fluid centered image" src="http://i.imgur.com/ZkW1m8H.jpg" />
                 <h4>Status: {{gb.status}}</h4>
                 <h3>Description</h3>
@@ -15,6 +14,7 @@
             </div>
             <div class="ui raised segment">
                 <i class="warning circle red icon"></i>Updates
+                <i class="add icon" style="float:right"></i>
                 <div class="ui divider"></div>
                 {{#each gb.updatemessages}}
                 <div class="ui fluid card">
@@ -30,6 +30,25 @@
             </div>
         </div>
         <div class="four wide column">
+            {{#if gb.updatemessages}}
+            <div class="ui raised segment">
+              <div class="ui feed">
+                  {{#each gb.updatemessages}}
+                  <div class="event">
+                      <div class="content">
+                          <div class="summary">
+                              <a class="user">{{gb.gbRunner}}</a> posted an update on
+                              <div class="date">
+                                  {{momentFormat createdAt}}
+                              </div>
+                          </div>
+
+                      </div>
+                  </div>
+                  {{/each}}
+                </div>
+            </div>
+            {{/if}}
             <div class='ui raised segment'>
                 <a href="http://{{gb.gbBuyLink}}">
                     <div class="ui labeled button fluid" id="joinbutton" tabindex="0">
