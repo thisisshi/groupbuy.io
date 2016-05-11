@@ -1,5 +1,5 @@
 # groupbuy.io
-A Platform for Group Buys
+A Platform for Group Buys, built with Meteor
  
 ### Installation
 1. Download [meteor](http://www.meteor.com)
