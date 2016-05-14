@@ -13,33 +13,6 @@ Groupbuys.allow({
 
 });
 
-update = new SimpleSchema({
-    name: {
-        type: String,
-        label: "Update Name"
-    },
-    text: {
-        type: String,
-        label: "Uupdate Text",
-        autoform: {
-            afFieldINput: {
-                type: "textarea",
-                rows: 4
-            }
-        }
-    },
-    createdAt: {
-        type: Date,
-        label: "Created At",
-        autoValue: function() {
-            return new Date();
-        },
-        autoform: {
-            type: "hidden"
-        }
-    }
-});
-
 UpdateMessage = new SimpleSchema({
     name: {
         type: String,
@@ -59,7 +32,11 @@ UpdateMessage = new SimpleSchema({
         type: Date,
         label: "Created At",
         autoValue: function() {
-            return new Date();
+            if(this.isSet){
+              return this.value;
+            }else{
+              return new Date();
+            }
         },
         autoform: {
             type: "hidden"
@@ -308,11 +285,25 @@ GroupbuySchema = new SimpleSchema({
         type: Date,
         label: "Created At",
         autoValue: function() {
+          if(!this.isSet){
             return new Date();
+          }else{
+            return this.value;
+          }
         },
         autoform: {
             type: "hidden"
         }
+    },
+    updatedAt: {
+      type: Date,
+      label: "Created At",
+      autoValue: function() {
+          return new Date();
+      },
+      autoform: {
+          type: "hidden"
+      }
     }
 });
 

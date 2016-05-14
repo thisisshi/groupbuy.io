@@ -45,3 +45,4 @@ mrt:moment-timezone
 useraccounts:bootstrap
 semantic:ui
 flemay:less-autoprefixer
+aldeed:schema-deny
