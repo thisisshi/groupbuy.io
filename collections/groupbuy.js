@@ -5,10 +5,10 @@ Groupbuys.allow({
         return !!userId;
     },
     update: function(userId, doc) {
-        return author == userId;
+        return !!userId;
     },
     remove: function(userId, doc) {
-        return author == userId;
+        return author === userId;
     }
 });
 
@@ -298,7 +298,7 @@ GroupbuySchema = new SimpleSchema({
         type: String,
         label: "Author",
         autoValue: function() {
-            return 'test';
+            return this.userId;
         },
         autoform: {
             type: "hidden"
