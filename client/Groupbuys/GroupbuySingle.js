@@ -7,6 +7,11 @@ Template.GBSingle.helpers({
     },
     momentFormat: function(time) {
         return moment(time).format('MM/DD/YYYY');
+    },
+    checkAuthor: function(author){
+      console.log(author);
+      console.log(Meteor.userId()); 
+      return Meteor.userId() === author;
     }
 });
 

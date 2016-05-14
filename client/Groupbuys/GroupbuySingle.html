@@ -1,22 +1,22 @@
 <template name="GBSingle">
+  {{#with gb}}
     <div class="ui grid">
         <div class="twelve wide column">
             <div class="ui raised segment">
-                <h1 class="ui header">{{gb.name}}</h1>
+                <h1 class="ui header">{{name}}</h1>
                 <div class="ui divider"></div>
-                <h4>{{gb.gbType}} : {{gb.gbSubType}}</h4>
+                <h4>{{gbType}} : {{gbSubType}}</h4>
                 <img class="ui fluid centered image" src="http://i.imgur.com/ZkW1m8H.jpg" />
-                <h4>Status: {{gb.status}}</h4>
+                <h4>Status: {{status}}</h4>
                 <h3>Description</h3>
                 <p>
-                    {{gb.description}}
+                    {{description}}
                 </p>
             </div>
             <div class="ui raised segment">
                 <i class="warning circle red icon"></i>Updates
-                <i class="add icon" style="float:right"></i>
                 <div class="ui divider"></div>
-                {{#each gb.updatemessages}}
+                {{#each updatemessages}}
                 <div class="ui fluid card">
                     <div class="content">
                         <div class="header">{{name}}</div>
@@ -30,14 +30,14 @@
             </div>
         </div>
         <div class="four wide column">
-            {{#if gb.updatemessages}}
+            {{#if updatemessages}}
             <div class="ui raised segment">
               <div class="ui feed">
-                  {{#each gb.updatemessages}}
+                  {{#each updatemessages}}
                   <div class="event">
                       <div class="content">
                           <div class="summary">
-                              <a class="user">{{gb.gbRunner}}</a> posted an update on
+                              <a class="user">Update:</a> posted on
                               <div class="date">
                                   {{momentFormat createdAt}}
                               </div>
@@ -50,14 +50,22 @@
             </div>
             {{/if}}
             <div class='ui raised segment'>
-                <a href="http://{{gb.gbBuyLink}}">
-                    <div class="ui labeled button fluid" id="joinbutton" tabindex="0">
-                        <div class="ui positive button fluid">
-                            <i class="add icon"></i> Join Groupbuy
-                        </div>
-                        <a class="ui basic label">{{gb.progressTowardsMOQ}} / {{gb.gbMOQ}}</a>
-                    </div>
-                </a>
+                {{#if checkAuthor author}}
+                  <a href="/gb/update/{{_id}}">
+                      <div class="ui button yellow fluid" tabindex="0">
+                          <i class="write icon"></i> Update Groupbuy
+                      </div>
+                  </a>
+                {{else}}
+                  <a href="http://{{gbBuyLink}}">
+                      <div class="ui labeled button fluid" id="joinbutton" tabindex="0">
+                          <div class="ui positive button fluid">
+                              <i class="add icon"></i> Join Groupbuy
+                          </div>
+                          <a class="ui basic label">{{progressTowardsMOQ}} / {{gbMOQ}}</a>
+                      </div>
+                  </a>
+                {{/if}}
             </div>
             <div class="ui stacked segment">
                 <h3>Dates</h3>
@@ -67,7 +75,7 @@
                         <p>Groupbuy Period</p>
                     </div>
                     <div class="ui secondary red segment">
-                        <p>{{momentFormat gb.gbStartDate}} - {{momentFormat gb.gbEndDate}}</p>
+                        <p>{{momentFormat gbStartDate}} - {{momentFormat gbEndDate}}</p>
                     </div>
                 </div>
                 <div class="ui segments">
@@ -78,23 +86,23 @@
                     </div>
                     <div class="ui secondary green segment">
                         <p>
-                            {{momentFormat gb.estimatedShipDate}}
+                            {{momentFormat estimatedShipDate}}
                         </p>
                     </div>
                 </div>
                 <div class="ui divider"></div>
                 <h3>Important Links</h3>
                 <div class="ui divider"></div>
-                <a href="mailto:{{gb.gbRunnerContact}}">
+                <a href="mailto:{{gbRunnerContact}}">
                     <div class="ui labeled button fluid" id="joinbutton" tabindex="0">
                         <div class="ui teal button fluid">
                             <i class="send outline icon"></i> Contact
                         </div>
-                        <a class="ui basic label">{{gb.gbRunner}}</a>
+                        <a class="ui basic label">{{gbRunner}}</a>
                     </div>
                 </a>
                 <div class="ui divider"></div>
-                <a href="http://{{gb.gbForumLink}}">
+                <a href="http://{{gbForumLink}}">
                     <div class="ui blue button fluid" id="joinbutton" tabindex="0">
                         <i class="info circle icon"></i> More Information
                     </div>
@@ -102,4 +110,5 @@
             </div>
         </div>
     </div>
+  {{/with}}
 </template>
