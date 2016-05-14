@@ -5,10 +5,10 @@ Groupbuys.allow({
         return !!userId;
     },
     update: function(userId, doc) {
-        return !!userId;
+        return Meteor.userId() == doc.author;
     },
     remove: function(userId, doc) {
-        return author === userId;
+        return Meteor.userId() == doc.author;
     }
 
 });
@@ -190,7 +190,6 @@ GroupbuySchema = new SimpleSchema({
                 if (Meteor.isClient) {
                     var gbType = '';
                     gbType = AutoForm.getFieldValue('gbType', 'GBForm');
-                    console.log(gbType);
                     optionSet1 = [{
                         label: '40%',
                         value: '40%'
