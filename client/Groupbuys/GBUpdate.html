@@ -1,5 +1,86 @@
 <template name="GBUpdate">
   {{#with getGB}}
-    {{> quickForm collection="Groupbuys" doc=this id="updateGB" type="update"}}
-  {{/with}}
+    {{#autoForm collection="Groupbuys" id="GBForm" type="update" doc=this}}
+    <fieldset>
+        <form class="ui form">
+            <div class="ui grid">
+                <div class="twelve wide column">
+                    <div class="ui raised segment">
+                        <h1 class="ui header">{{> afQuickField name="name"}}</h1>
+                        <h4>
+                      <div class="two fields">
+                            <div class="field">
+                              {{> afQuickField name="gbType"}}
+                            </div>
+                            <div class="field">
+                              {{> afQuickField name="gbSubType"}}
+                            </div>
+                      </div>
+                    </h4>
+                        <div class="field">
+                            {{> afQuickField name="manufacturer"}}
+                        </div>
+                        <div class="ui divider"></div>
+                        <img class="ui fluid centered image" src="http://i.imgur.com/ZkW1m8H.jpg" />
+                        <h4>{{> afQuickField name="status"}}</h4>
+                        <div class="two fields">
+                          <div class="field">
+                            {{> afQuickField name="progressTowardsMOQ"}}
+                          </div>
+                          <div class="field">
+                            {{> afQuickField name="gbMOQ"}}
+                          </div>
+                        </div>
+                        <p>
+                            {{> afQuickField name="description"}}
+                        </p>
+                        {{> afQuickField name="updatemessages"}}
+
+                    </div>
+                </div>
+                <div class="four wide column">
+                    <div class='ui raised segment'>
+                      <h3>Groupbuy Runner Information</h3>
+                      <div class="ui divider"></div>
+                      {{> afQuickField name="gbRunner"}}
+                      {{> afQuickField name="gbRunnerLocation"}}
+                      {{> afQuickField name="gbRunnerForum"}}
+                      {{> afQuickField name="gbRunnerContact"}}
+                    </div>
+                    <div class="ui stacked segment">
+                        <h3>Dates</h3>
+                        <div class="ui divider"></div>
+                        <div class="ui segments">
+                            <div class="ui segment">
+                                <p>Groupbuy Period</p>
+                            </div>
+                            <div class="ui secondary red segment">
+                                <p>{{> afQuickField name="gbStartDate"}} {{> afQuickField name="gbEndDate"}}</p>
+                            </div>
+                        </div>
+                        <div class="ui segments">
+                            <div class="ui segment">
+                                <p>
+                                    Estimaged Shipping Date
+                                </p>
+                            </div>
+                            <div class="ui secondary green segment">
+                                <p>
+                                    {{> afQuickField name="estimatedShippingDate"}}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="ui divider"></div>
+                        <h3>Important Links</h3>
+                        <div class="ui divider"></div>
+                        {{> afQuickField name="gbForumLink"}}
+                        {{> afQuickField name="gbBuyLink"}}
+                    </div>
+                </div>
+            </div>
+        </form>
+    </fieldset>
+    <button type="submit" class="ui green button fluid">Create New Groupbuy</button>
+    {{/autoForm}}
+    {{/with}}
 </template>

@@ -10,6 +10,7 @@ Groupbuys.allow({
     remove: function(userId, doc) {
         return author === userId;
     }
+
 });
 
 update = new SimpleSchema({
@@ -188,7 +189,7 @@ GroupbuySchema = new SimpleSchema({
             options: function() {
                 if (Meteor.isClient) {
                     var gbType = '';
-                    gbType = AutoForm.getFieldValue('gbType', 'insertGBForm');
+                    gbType = AutoForm.getFieldValue('gbType', 'GBForm');
                     console.log(gbType);
                     optionSet1 = [{
                         label: '40%',
