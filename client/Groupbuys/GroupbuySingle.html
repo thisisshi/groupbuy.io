@@ -13,21 +13,23 @@
                     {{description}}
                 </p>
             </div>
-            <div class="ui raised segment">
-                <i class="warning circle red icon"></i>Updates
-                <div class="ui divider"></div>
-                {{#each updatemessages}}
-                <div class="ui fluid card">
-                    <div class="content">
-                        <div class="header">{{name}}</div>
-                        <div class="meta">
-                            <span>{{momentFormat createdAt}}</span>
-                        </div>
-                        {{#markdown}}{{updatetext}}{{/markdown}}
-                    </div>
-                </div>
-                {{/each}}
-            </div>
+            {{#if updatemessages}}
+              <div class="ui raised segment">
+                  <i class="warning circle red icon"></i>Updates
+                  <div class="ui divider"></div>
+                  {{#each updatemessages}}
+                  <div class="ui fluid card">
+                      <div class="content">
+                          <div class="header">{{name}}</div>
+                          <div class="meta">
+                              <span>{{momentFormat createdAt}}</span>
+                          </div>
+                          {{#markdown}}{{updatetext}}{{/markdown}}
+                      </div>
+                  </div>
+                  {{/each}}
+              </div>
+            {{/if}}
         </div>
         <div class="four wide column">
             {{#if updatemessages}}
