@@ -59,6 +59,10 @@ GroupbuySchema = new SimpleSchema({
             }
         }
     },
+    imageurl: {
+      type: String,
+      label: "Image URL"
+    },
     updatemessages: {
         type: [UpdateMessage],
         label: "Updates",
