@@ -1,1 +1,0 @@
-AutoForm.setDefaultTemplate('bootstrap3');
